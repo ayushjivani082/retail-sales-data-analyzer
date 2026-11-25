@@ -4,7 +4,7 @@ CREAT BY : AYUSH JIVANI
 
 LANGUAGE : PYTHON
 
-REPOSITORIES LINK:
+REPOSITORIES LINK:https://github.com/ayushjivani082/retail-sales-data-analyzer/tree/af275df3022127790223fea10956fd73b0f87c22/retail%20sales%20data%20analyzer
 
 
 Retail Sales Data Analyzer
