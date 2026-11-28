@@ -209,3 +209,103 @@ Concepts Covered
 - NumPy arrays and calculations
 - Data cleaning and filtering
 - Data visualization
+
+
+✨ Key Features
+  Feature                             What it does
+  📂 CSV Handling                     Creates and loads retail sales CSV
+data
+
+  🧹 Data Cleaning                    Handles missing values and removes
+invalid records
+
+  💰 Sales Metrics                    Calculates total and average sales
+
+  🏆 Popular Product                  Finds the product with the highest
+quantity sold
+
+  📈 Growth Analysis                  Calculates average daily sales
+growth
+
+  🔎 Data Filtering                   Filters records by category or date
+range
+
+  📊 Charts                           Creates a bar chart, line graph and
+heatmap
+💾 Save Data                        Exports cleaned data to a CSV file
+🧰 Technologies & Libraries
+- Python -- Main programming language
+- Pandas -- Reading, cleaning, filtering and grouping data
+- NumPy -- Numerical calculations and array operations
+- Matplotlib -- Creating charts
+- Seaborn -- Statistical data visualization
+📁 Project Structure
+Retail-Sales-Data-Analyzer/
+│
+├── retail_sales_analyzer.py
+├── retail_sales.csv
+└── README.md
+retail_sales.csv is created automatically when the default file is
+not found.
+
+⚙️ Installation & Setup
+1. Install Python
+Make sure Python is installed on your computer.
+2. Install Required Libraries
+Open the VS Code terminal and run:
+pip install pandas numpy matplotlib seaborn
+3. Run the Project
+python retail_sales_analyzer.py
+Enter a CSV filename when asked, or press Enter to use
+retail_sales.csv.
+🖥️ Main Menu
+When the program runs, it displays this menu:
+
+   Option  Operation
+ 1️⃣    Calculate Sales Metrics
+ 2️⃣    Filter Sales Data
+ 3️⃣    Display Dataset
+ 4️⃣    Create Charts
+ 5️⃣    Save Cleaned CSV
+ 6️⃣    Exit
+📊 Visualizations
+The project creates three charts:
+1. Bar Chart
+Compares total sales across product categories.
+2. Line Graph
+Displays the daily sales trend over time.
+3. Heatmap
+Shows the correlation between product price and quantity sold.
+🗃️ Dataset Details
+The sample dataset contains the following columns:
+
+  Column            Description
+  Date            Date of the sale
+Product         Name of the product
+Category        Product category
+Price           Price per item
+Quantity Sold   Number of items sold
+Total Sales     Price multiplied by quantity sold
+
+Sales calculation:
+Total Sales = Price × Quantity Sold
+🎯 Python Concepts Practiced
+- Classes and Objects
+- Functions and Methods
+- Loops and Conditional Statements
+- File Handling
+- Exception Handling
+- CSV Processing
+- Pandas DataFrames
+- NumPy Arrays
+- Data Cleaning and Filtering
+- Data Visualization
+👨‍💻 Author
+Ayush Jivani
+
+Python Data Analysis Project
+::: {align="center"}
+### ⭐ Thank You for Visiting!
+
+**Explore • Analyze • Learn**
+:::
