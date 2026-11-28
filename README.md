@@ -118,3 +118,94 @@ Program tested with the sample dataset and edge cases.
 Charts have clear titles and labels.
 Conclusion
 The Retail Sales Data Analyzer combines Python programming, OOP, NumPy, Pandas, and data visualization. It helps organize retail sales data, calculate important metrics, filter records, and understand sales trends through charts.
+
+
+A Python-based project to analyze retail sales data, calculate sales
+metrics, filter records, and create visual charts.
+Project Overview
+Retail Sales Data Analyzer reads retail sales information from a CSV
+file and performs basic data analysis. It uses Pandas and NumPy
+for data handling and calculations, and Matplotlib and Seaborn
+to create charts.
+
+If the CSV file does not exist, the program creates a sample dataset
+automatically.
+Features
+- Create a sample retail sales CSV file.
+- Load and validate CSV data.
+- Clean missing or invalid values.
+- Calculate total sales and average sales.
+- Find the most popular product.
+- Calculate average sales growth.
+- Display sales by product, category, and date.
+- Filter sales by product category or date range.
+- Generate visualizations:
+  - Bar chart: Total sales by category
+  - Line graph: Daily sales trend
+  - Heatmap: Price and quantity correlation
+- Save the cleaned dataset as a CSV file.
+- Use a menu-driven interface.
+Technologies Used
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+Project Structure
+Retail-Sales-Data-Analyzer/
+│
+├── retail_sales_analyzer.py
+├── retail_sales.csv          # Created automatically if it does not exist
+└── README.md
+Installation
+Make sure Python is installed on your computer.
+
+Install the required libraries using the terminal:
+pip install pandas numpy matplotlib seaborn
+How to Run
+1. Download or clone this project.
+2. Open the project folder in VS Code or another Python editor.
+3. Open the terminal in the project folder.
+4. Run the Python file:
+python retail_sales_analyzer.py
+5. Enter a CSV filename when prompted, or press Enter to use the
+   default file retail_sales.csv.
+6. Use the menu to select the required operation.
+Main Menu
+  Option   Description
+  1        Calculate Sales Metrics
+2        Filter Sales Data
+3        Display Dataset
+4        Create Charts
+5        Save Cleaned CSV
+6        Exit
+Dataset Information
+The sample dataset contains these columns:
+
+  Column          Description
+  Date            Date of the sale
+Product         Product name
+Category        Product category
+Price           Price of one item
+Quantity Sold   Number of items sold
+Total Sales     Price multiplied by quantity sold
+
+Total Sales Formula:
+Total Sales = Price × Quantity Sold
+Charts
+The project generates three charts to help understand the sales data:
+1. Bar Chart -- compares total sales across product categories.
+2. Line Graph -- shows how sales change over different dates.
+3. Heatmap -- displays the correlation between price and quantity
+   sold.
+Concepts Covered
+- Python classes and objects
+- Functions and methods
+- Conditional statements and loops
+- File handling
+- Exception handling
+- CSV data processing
+- Pandas DataFrames and grouping
+- NumPy arrays and calculations
+- Data cleaning and filtering
+- Data visualization
