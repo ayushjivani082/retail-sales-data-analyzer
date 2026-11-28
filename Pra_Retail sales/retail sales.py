@@ -12,7 +12,7 @@ class RetailAnalyzer:
     def __init__(self):
         self.df = None
 
-    # Create CSV automatically
+    
     def create_csv(self, file_path):
 
         data = {
@@ -65,7 +65,7 @@ class RetailAnalyzer:
         print("\nCSV file created successfully!")
         print("File Name:", file_path)
 
-    # Load and validate CSV
+    
     def load_data(self, file_path):
 
         if not file_path.lower().endswith(".csv"):
@@ -94,7 +94,7 @@ class RetailAnalyzer:
                 print("CSV file is empty!")
                 return False
 
-            # Clean data
+            
             df["Date"] = pd.to_datetime(
                 df["Date"], errors="coerce"
             )
@@ -113,7 +113,7 @@ class RetailAnalyzer:
             df["Price"] = df["Price"].fillna(0)
             df["Quantity Sold"] = df["Quantity Sold"].fillna(0)
 
-            # Remove invalid dates and negative values
+            
             df = df.dropna(subset=["Date"])
 
             df = df[
@@ -125,7 +125,7 @@ class RetailAnalyzer:
                 print("No valid records found!")
                 return False
 
-            # Create calculated column
+            
             df["Total Sales"] = (
                 df["Price"] * df["Quantity Sold"]
             )
@@ -144,7 +144,7 @@ class RetailAnalyzer:
             print("Error loading CSV:", e)
             return False
 
-    # Calculate sales metrics
+    
     def calculate_metrics(self):
 
         if self.df is None or self.df.empty:
@@ -161,14 +161,14 @@ class RetailAnalyzer:
             .idxmax()
         )
 
-        # NumPy operations
+        
         sales_array = np.array(
             self.df["Total Sales"]
         )
 
         numpy_average = np.mean(sales_array)
 
-        # Daily sales and growth
+        
         daily_sales = (
             self.df.groupby("Date")["Total Sales"]
             .sum()
@@ -192,7 +192,7 @@ class RetailAnalyzer:
         else:
             average_growth = 0
 
-        print("\n========== SALES METRICS ==========")
+        print("\n-=-=-=-=--=-=- SALES METRICS -=-=-=-=-=-=-=")
 
         print("Total Sales:", round(total_sales, 2))
         print("Average Sales:", round(average_sales, 2))
@@ -213,7 +213,7 @@ class RetailAnalyzer:
         print("\nSales by Date:")
         print(daily_sales)
 
-    # Filter sales data
+    
     def filter_data(self):
 
         if self.df is None or self.df.empty:
@@ -274,7 +274,7 @@ class RetailAnalyzer:
             print("\nFiltered Total Sales:")
             print(result["Total Sales"].sum())
 
-    # Create all charts
+    
     def create_charts(self):
 
         if self.df is None or self.df.empty:
@@ -347,7 +347,7 @@ class RetailAnalyzer:
 
         print("\nAll charts created successfully!")
 
-    # Save cleaned dataset
+    
     def save_data(self, file_path):
 
         if self.df is not None:
@@ -355,7 +355,7 @@ class RetailAnalyzer:
             print("\nCleaned CSV saved successfully!")
 
 
-# Main Program
+
 def main():
 
     print("=" * 45)
@@ -382,11 +382,11 @@ def main():
     if not analyzer.load_data(file_path):
         return
 
-    # Automatic analysis and charts
+    
     analyzer.calculate_metrics()
     analyzer.create_charts()
 
-    # Menu
+
     while True:
 
         print("\n========== MAIN MENU ==========")
@@ -429,6 +429,6 @@ def main():
             print("Invalid choice! Please try again.")
 
 
-# Run program
+
 if __name__ == "__main__":
     main()
